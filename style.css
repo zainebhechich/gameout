@@ -1,0 +1,172 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #872121;
+}
+
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background: #ff9eed;
+    color: rgb(181, 14, 167);
+    padding: 1rem 0;
+   
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .gamesout{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav .ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+.nav .ul .li{
+    margin-left: 20px;  
+}
+.nav .ul .li .a{
+    color: rgb(29, 31, 142);
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav .ul .li .a:hover{
+    text-decoration: underline;
+}
+/* Hero Section */
+.hero{
+    background: url(https://img.freepik.com/free-vector/technology-futuristic-background_52683-36380.jpg?t=st=1732645776~exp=1732649376~hmac=a3c583b5a0178f6c42ff6600a64fca8a79525cd4a39024df4ce33d98da68c68e&w=996) no-repeat center center/cover;
+    color: white;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero .h2{
+    font-size: 2.5rem;
+}
+.hero .p{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+.hero .btn{
+    padding: 0.8rem 1.5rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.hero .btn:hover{
+    background: plum;
+}
+
+
+/* Products Section */
+.products {
+    padding: 2rem 0;
+    background: #f8f8f8;
+}
+
+.products .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    transition: 0.3s ease-in-out;
+    position:relative;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0.5px 10px #e6e6e6;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0.5px 10px #902189;
+    text-align: center;
+    
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.product p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #262627;
+}
+
+.product .btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product .btn:hover {
+    background: #0056b3;
+}
+
+
+
+footer {
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 1.5rem 0; /* Padding for top and bottom spacing */
+    text-align: center; /* Center-align text and content */
+}
+footer p {
+    margin-bottom: 0; /* Remove default bottom margin */
+    font-size: 1rem; /* Standard font size */
+    color: #ccc; /* Light gray text color */
+}
+footer a {
+    color: #fff; /* White link color */
+    font-size: 1.25rem; /* Slightly larger icons */
+    margin: 0 0.5rem; /* Spacing between icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+footer a:hover {
+    color: #007bff; /* Primary blue color on hover */
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+footer .mt-2 {
+    margin-top: 1rem; /* Space above social icons */
+}
+@media (max-width: 768px) {
+    footer a {
+        font-size: 1rem; /* Slightly smaller icons for mobile */
+    }
+}
