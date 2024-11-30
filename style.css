@@ -6,45 +6,114 @@ body{
     color: #872121;
 }
 
-
-.container{
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.header{
+.header {
     background: #ff9eed;
     color: rgb(181, 14, 167);
     padding: 1rem 0;
-   
+    transition: all 0.3s ease-in-out;
 }
-.header .container{
+
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
-.header .gamesout{
+
+.header .gamesout {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.nav .ul{
+/* Hamburger Button */
+.hamburger {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hide hamburger by default */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display:  block; /* Show hamburger button on small screens */
+    }
+
+ 
+.nav ul  {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; 
+    display: flex;
 }
-.nav .ul .li{
-    margin-left: 20px;  
+
+.nav ul li {
+    margin-left: 20px;
 }
-.nav .ul .li .a{
+
+.nav ul li a {
     color: rgb(29, 31, 142);
     text-decoration: none;
     font-weight: bold;
 }
-.nav .ul .li .a:hover{
+
+.nav ul li a:hover {
     text-decoration: underline;
 }
+
+
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .header .gamesout {
+        font-size: 0.2rem; /* Smaller font size for logo */
+    }
+
+    .nav ul li a {
+        font-size: 0.9rem; /* Reduce font size for links */
+    }
+
+    .nav ul {
+        padding: 0;
+        text-align: center; /* Center the links */
+    }
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+}
+    .nav ul {
+        display: none; /* Hide navigation by default */
+        flex-direction: column;
+        background: #ff9eed;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav ul.active {
+        display: flex; /* Show navigation when active */
+    }
+}
+
+
 /* Hero Section */
 .hero{
     background: url(https://img.freepik.com/free-vector/technology-futuristic-background_52683-36380.jpg?t=st=1732645776~exp=1732649376~hmac=a3c583b5a0178f6c42ff6600a64fca8a79525cd4a39024df4ce33d98da68c68e&w=996) no-repeat center center/cover;
@@ -53,7 +122,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center; 
+    transition: all 0.3s ease-in-out; 
 }
 .hero .h2{
     font-size: 2.5rem;
@@ -72,6 +142,12 @@ body{
 }
 .hero .btn:hover{
     background: plum;
+    transform: scale(1.05); 
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'alfa slab one', coursive;
 }
 
 
@@ -98,7 +174,10 @@ body{
     margin-top: 5%;
     text-align: center;
 }
-
+.product-grid .product:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
+}
 .product {
     background: white;
     border: 1px solid #ddd;
@@ -138,6 +217,33 @@ body{
 .product .btn:hover {
     background: #0056b3;
 }
+@media (max-width: 768px) {
+    .container  {
+        align-items:center; /* Slightly smaller icons for mobile */
+    }
+   .product-grid{
+     font-size: 1rem;
+     flex-direction: column;
+   }
+   .products{
+    font-size: 1rem;
+   }
+   .products .section-title{
+    font-size: 1rem;
+   }
+   .product img {
+    font-size: 1rem;
+   }
+   .product h3{
+    font-size: 1rem;
+   }
+   .product p{
+    font-size: 1rem;
+   }
+   .product .btn {
+    font-size: 1rem;
+   }
+}
 
 
 
@@ -169,4 +275,5 @@ footer .mt-2 {
     footer a {
         font-size: 1rem; /* Slightly smaller icons for mobile */
     }
+    
 }

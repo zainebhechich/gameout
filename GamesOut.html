@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games Out</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="images/x-icon">
 </html>
 </head>
 <body>
      <!-- Header -->
      <header class="header">
         <div class="container">
+            
             <h1 class="GamesOut">GamesOut</h1>
+             <!-- Hamburger Menu Button -->
+        <button id="mobile-menu-button" type="button" class="hamburger" onclick="toggleMenu()">☰</button>
+                    
+        
             <nav class="nav">
-                <ul>
+                <ul><!-- This element should be selected by the script -->
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                
             </nav>
         </div>
     </header>
-
+      <div class="sm:hidden" id="mobile-menu-button">
+      </div>
+   
      <!-- Hero Section -->
      <section class="hero">
         <div class="container text-center">
             <h2>Welcome to Our Store</h2>
-            <p>Find the best deals on our premium products!</p>
+            <p>Find the best deals on our premium products!</p><br>
             <a href="#products" class="btn">Shop Now</a>
         </div>
     </section>
@@ -69,12 +76,21 @@
     </section>
     <!--footer-->  
     <footer class="py-3 bg-dark text-white text-center">
-        <fp class="mb-0">&copy; 2024 GamesOut. All Rights Reserved.</p>
+        <fp class="mb-0">&copy; 2024 GamesOut. For The Best Products.</p>
         <div class="mt-2">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
     </footer> 
+      <!-- JavaScript -->
+      <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
 
 </body>
